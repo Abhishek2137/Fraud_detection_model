@@ -1,10 +1,11 @@
 import axios from 'axios';
 
 const client = axios.create({
-  baseURL: '/api',
+  baseURL: 'https://fraud-detection-model-ay51.onrender.com',
   headers: {
     'Content-Type': 'application/json',
   },
+  timeout: 10000,
 });
 
 export async function checkHealth() {
